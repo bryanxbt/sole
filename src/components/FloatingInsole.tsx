@@ -17,7 +17,7 @@ type Props = {
 export function FloatingInsole({
   className = "",
   size = 420,
-  src = "/images/insole.png",
+  src = "/images/insole.jpg",
   alt = "Sole — Arch Support insole",
   float = true,
   rotateOnScroll = false,
@@ -58,7 +58,7 @@ export function FloatingInsole({
               }
             : undefined
         }
-        className="product-shadow relative will-change-transform"
+        className="relative will-change-transform"
       >
         <Image
           src={src}
@@ -66,8 +66,9 @@ export function FloatingInsole({
           width={size}
           height={size}
           priority={priority}
-          className="w-full h-auto select-none pointer-events-none"
+          className="h-auto w-full select-none pointer-events-none"
           draggable={false}
+          sizes="(max-width: 768px) 80vw, 420px"
         />
       </motion.div>
     </div>
