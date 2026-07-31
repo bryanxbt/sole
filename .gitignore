@@ -38,3 +38,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.venv/
+public/images/insole-cutout-preview*.jpg
+public/images/insole-on-cream-preview.jpg

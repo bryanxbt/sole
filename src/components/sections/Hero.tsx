@@ -11,14 +11,6 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-cream px-6 pb-20 pt-28"
     >
-      {/* Giant faded official-style Arch */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <ArchShape
-          className="h-[min(130vw,1100px)] w-[min(130vw,1100px)] text-orange"
-          opacity={0.12}
-        />
-      </div>
-
       {/* Corner geometric accents */}
       <div className="pointer-events-none absolute left-6 top-24 h-16 w-16 border-l border-t border-orange/25 sm:left-10 sm:top-28" />
       <div className="pointer-events-none absolute bottom-16 right-6 h-16 w-16 border-b border-r border-orange/25 sm:bottom-20 sm:right-10" />
@@ -76,13 +68,22 @@ export function Hero() {
           The community token providing Arch Support.
         </motion.p>
 
+        {/* Product stage: cutout sole floating over giant Arch */}
         <motion.div
-          className="relative my-10 sm:my-14"
+          className="relative my-8 flex w-full max-w-xl items-center justify-center sm:my-12"
           initial={{ opacity: 0, scale: 0.94, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <FloatingInsole size={380} priority rotateOnScroll float />
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+            <ArchShape
+              className="h-[min(95vw,560px)] w-[min(95vw,560px)] text-orange"
+              opacity={0.22}
+            />
+          </div>
+          <div className="relative z-10">
+            <FloatingInsole size={360} priority rotateOnScroll float />
+          </div>
         </motion.div>
 
         <motion.p
