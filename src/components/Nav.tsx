@@ -1,8 +1,17 @@
 "use client";
 
 import { SoleMark } from "./SoleBrand";
+import { withBase } from "@/lib/paths";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
+
+const links = [
+  { href: "/#product", label: "Product" },
+  { href: "/#features", label: "Features" },
+  { href: "/#manifesto", label: "Manifesto" },
+  { href: "/esports/", label: "E-Sports" },
+  { href: "/#specs", label: "Specs" },
+] as const;
 
 export function Nav() {
   const { scrollY } = useScroll();
@@ -27,29 +36,29 @@ export function Nav() {
         }`}
         style={{ maxWidth: scrolled ? "56rem" : undefined }}
       >
-        <a href="#top" className="flex items-center gap-2.5 text-ink">
+        <a href={withBase("/")} className="flex items-center gap-2.5 text-ink">
           <SoleMark className="h-7 w-7 shrink-0" />
           <span className="font-display text-[17px] font-normal tracking-tight text-orange">
             $SOLE
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 text-[13px] text-ink-muted sm:flex">
-          <a href="#product" className="transition-colors hover:text-ink">
-            Product
-          </a>
-          <a href="#features" className="transition-colors hover:text-ink">
-            Features
-          </a>
-          <a href="#manifesto" className="transition-colors hover:text-ink">
-            Manifesto
-          </a>
-          <a href="#specs" className="transition-colors hover:text-ink">
-            Specs
-          </a>
+        <nav className="hidden items-center gap-6 text-[13px] text-ink-muted lg:flex lg:gap-8">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={withBase(link.href)}
+              className="transition-colors hover:text-ink"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
 
-        <a href="#buy" className="btn-primary !px-5 !py-2.5 text-[13px]">
+        <a
+          href={withBase("/#buy")}
+          className="btn-primary !px-5 !py-2.5 text-[13px]"
+        >
           Buy $SOLE
         </a>
       </div>
