@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { AssetImage } from "../AssetImage";
 import { Reveal } from "../Reveal";
 import { FloatingInsole } from "../FloatingInsole";
 import { SoleMark } from "../SoleBrand";
@@ -59,7 +59,7 @@ export function Footer() {
         </div>
         <div className="flex items-center gap-3">
           <div className="relative h-9 w-9 overflow-hidden rounded-full ring-1 ring-ink/10">
-            <Image
+            <AssetImage
               src="/images/arch-pepe.jpg"
               alt="Arch Pepe"
               fill

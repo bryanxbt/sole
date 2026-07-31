@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { AssetImage } from "../AssetImage";
 import { FloatingInsole } from "../FloatingInsole";
 import { SoleMark } from "../SoleBrand";
 
@@ -23,7 +23,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Image
+          <AssetImage
             src="/images/brand/wordmark-lockup-full.png"
             alt="$SOLE Arch Support"
             width={1200}

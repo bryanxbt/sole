@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { AssetImage } from "./AssetImage";
 
 /** Official $SOLE mark — inverted arch / sole V */
 export function SoleMark({
@@ -64,7 +64,7 @@ export function SoleWordmark({
   const item = map[variant];
 
   return (
-    <Image
+    <AssetImage
       src={item.src}
       alt={item.alt}
       width={item.width}

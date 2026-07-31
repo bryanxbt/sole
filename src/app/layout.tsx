@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
+import { withBase } from "@/lib/paths";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,7 +20,10 @@ const display = Cormorant_Garamond({
   weight: ["400", "500", "600"],
 });
 
+const siteUrl = "https://buildtogetherlabs.github.io/sole";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "$SOLE — Arch Support",
   description:
     "Every Arch needs a Sole. The unofficial community token providing Arch Support on Arch Network.",
@@ -27,17 +31,17 @@ export const metadata: Metadata = {
     title: "$SOLE — Arch Support",
     description:
       "Every Arch needs a Sole. The community token providing Arch Support.",
-    images: ["/images/brand/wordmark-lockup-full.png"],
+    images: [withBase("/images/brand/wordmark-lockup-full.png")],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "$SOLE — Arch Support",
     description: "Every Arch needs a Sole.",
-    images: ["/images/brand/wordmark-lockup-full.png"],
+    images: [withBase("/images/brand/wordmark-lockup-full.png")],
   },
   icons: {
-    icon: "/images/sole-mark.svg",
+    icon: withBase("/images/sole-mark.svg"),
   },
 };
 

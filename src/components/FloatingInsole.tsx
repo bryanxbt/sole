@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
+import { AssetImage } from "./AssetImage";
 
 type Props = {
   className?: string;
@@ -72,7 +72,7 @@ export function FloatingInsole({
         }
         className="relative will-change-transform"
       >
-        <Image
+        <AssetImage
           src={src}
           alt={alt}
           width={size}

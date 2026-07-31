@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { AssetImage } from "./AssetImage";
 
 /**
  * Official Arch Network mark — four nested arches (no crossbar).
@@ -77,7 +77,7 @@ export function ArchLogo({
       : "/images/arch-logo-orange-on-cream.png";
 
   return (
-    <Image
+    <AssetImage
       src={src}
       alt={alt}
       width={size}

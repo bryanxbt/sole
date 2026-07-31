@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import type { ReactNode } from "react";
+import { AssetImage } from "../AssetImage";
 import { Reveal, RevealStagger, RevealItem } from "../Reveal";
 import { FloatingInsole } from "../FloatingInsole";
 
@@ -144,7 +144,7 @@ function FeatureBlock({
 
         <Reveal delay={0.12} className="relative">
           <div className="overflow-hidden rounded-[2rem] bg-cream-deep/60 p-4 sm:p-8">
-            <Image
+            <AssetImage
               src={image}
               alt={imageAlt}
               width={900}
@@ -240,7 +240,7 @@ function BuilderGrade() {
 
         <Reveal delay={0.1} className="mx-auto mt-14 max-w-lg">
           <div className="overflow-hidden rounded-[2rem] bg-cream-deep/50 p-3 sm:p-5">
-            <Image
+            <AssetImage
               src="/images/arch-pepe.jpg"
               alt="Arch Pepe — Builder Grade™"
               width={700}

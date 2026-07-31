@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { AssetImage } from "../AssetImage";
 import { Reveal, RevealStagger, RevealItem } from "../Reveal";
 import { SoleMark } from "../SoleBrand";
 
@@ -55,7 +55,7 @@ export function Community() {
               <div className="group relative aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-cream-deep">
                 {/* Arch-inspired rounded top crop frame */}
                 <div className="absolute inset-0">
-                  <Image
+                  <AssetImage
                     src={card.image}
                     alt={`Arch Pepe — ${card.label}`}
                     fill
