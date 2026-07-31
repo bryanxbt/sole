@@ -1,6 +1,6 @@
 "use client";
 
-import { ArchLogo } from "./ArchMark";
+import { SoleMark } from "./SoleBrand";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 
@@ -28,8 +28,8 @@ export function Nav() {
         style={{ maxWidth: scrolled ? "56rem" : undefined }}
       >
         <a href="#top" className="flex items-center gap-2.5 text-ink">
-          <ArchLogo variant="orange" size={26} className="shrink-0" />
-          <span className="text-[15px] font-semibold tracking-tight">
+          <SoleMark className="h-7 w-7 shrink-0" />
+          <span className="font-display text-[17px] font-normal tracking-tight text-orange">
             $SOLE
           </span>
         </a>

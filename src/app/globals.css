@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #f5ede0;
-  --cream-deep: #ebe2d2;
-  --cream-soft: #faf6ef;
-  --orange: #e85a1c;
-  --orange-hot: #ff6a28;
-  --orange-deep: #c4450f;
+  /* Official brand: cream #F3EFD7 · orange #EC641D */
+  --cream: #f3efd7;
+  --cream-deep: #e8e2c8;
+  --cream-soft: #f8f5e6;
+  --orange: #ec641d;
+  --orange-hot: #ff7a35;
+  --orange-deep: #c44f12;
   --indigo: #1a1630;
   --indigo-mid: #241f3d;
   --indigo-soft: #2e2850;
@@ -29,7 +30,11 @@
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --font-sans: var(--font-geist-sans);
-  --font-display: var(--font-display);
+  --font-display: var(--font-display), "Times New Roman", serif;
+}
+
+.font-display {
+  font-family: var(--font-display), "Times New Roman", serif;
 }
 
 * {

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="220" viewBox="0 0 1400 220">
+<style>
+.wordmark{
+ font-family:"Geist", "Helvetica Neue", Arial, sans-serif;
+ font-size:84px;
+ letter-spacing:0.28em;
+ fill:#EC641D;
+ font-weight:500;
+}
+</style>
+<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" class="wordmark">ARCH SUPPORT</text>
+</svg>

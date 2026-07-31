@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { Reveal } from "../Reveal";
+import { SoleMark } from "../SoleBrand";
 
 const specs = [
   { label: "Ticker", value: "SOLE" },
@@ -17,13 +17,9 @@ export function Specs() {
     <section id="specs" className="bg-indigo px-6 py-28 text-cream sm:py-36">
       <div className="mx-auto max-w-3xl">
         <Reveal className="mb-14 text-center sm:mb-20">
-          <Image
-            src="/images/arch-logo-cream-on-orange.png"
-            alt="Arch Network"
-            width={44}
-            height={44}
-            className="mx-auto mb-6 h-11 w-11 rounded-xl object-contain shadow-[0_8px_24px_rgba(232,90,28,0.35)]"
-          />
+          <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange shadow-[0_8px_24px_rgba(236,100,29,0.35)]">
+            <SoleMark className="h-8 w-8" color="#F3EFD7" />
+          </div>
           <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-orange">
             Product Specifications
           </p>

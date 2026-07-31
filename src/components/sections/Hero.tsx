@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FloatingInsole } from "../FloatingInsole";
-import { ArchShape } from "../ArchMark";
+import { SoleMark } from "../SoleBrand";
 
 export function Hero() {
   return (
@@ -16,45 +16,28 @@ export function Hero() {
       <div className="pointer-events-none absolute bottom-16 right-6 h-16 w-16 border-b border-r border-orange/25 sm:bottom-20 sm:right-10" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        {/* Official $SOLE · ARCH SUPPORT lockup */}
         <motion.div
-          className="mb-6"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full max-w-2xl px-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src="/images/arch-logo-orange-on-cream.png"
-            alt="Arch Network"
-            width={48}
-            height={48}
-            className="mx-auto h-12 w-12 object-contain"
+            src="/images/brand/wordmark-lockup-full.png"
+            alt="$SOLE Arch Support"
+            width={1200}
+            height={520}
             priority
+            className="mx-auto h-auto w-full max-w-[min(92vw,640px)] object-contain"
           />
         </motion.div>
-
-        <motion.p
-          className="mb-4 text-[11px] font-medium uppercase tracking-[0.35em] text-orange"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        >
-          Arch Support
-        </motion.p>
-
-        <motion.h1
-          className="text-[clamp(3.5rem,12vw,8.5rem)] font-semibold leading-[0.9] tracking-tight text-orange"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-        >
-          $SOLE
-        </motion.h1>
 
         <motion.p
           className="mt-6 max-w-md text-[clamp(1.15rem,2.4vw,1.5rem)] font-medium leading-snug tracking-tight text-ink"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           Every Arch needs a Sole.
         </motion.p>
@@ -63,12 +46,12 @@ export function Hero() {
           className="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           The community token providing Arch Support.
         </motion.p>
 
-        {/* Product stage: cutout sole floating over giant Arch */}
+        {/* Product stage: cutout sole floating over Sole mark */}
         <motion.div
           className="relative my-8 flex w-full max-w-xl items-center justify-center sm:my-12"
           initial={{ opacity: 0, scale: 0.94, y: 30 }}
@@ -76,9 +59,8 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <ArchShape
-              className="h-[min(95vw,560px)] w-[min(95vw,560px)] text-orange"
-              opacity={0.22}
+            <SoleMark
+              className="h-[min(90vw,520px)] w-[min(90vw,520px)] opacity-[0.14]"
             />
           </div>
           <div className="relative z-10">

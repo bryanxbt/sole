@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Reveal, RevealStagger, RevealItem } from "../Reveal";
-import { ArchLogo } from "../ArchMark";
+import { SoleMark } from "../SoleBrand";
 
 const cards = [
   {
@@ -65,8 +65,8 @@ export function Community() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
                 <div className="absolute left-3 top-3 opacity-90">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-ink/70 backdrop-blur-sm">
-                    <ArchLogo variant="cream" size={18} />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-cream/90 backdrop-blur-sm">
+                    <SoleMark className="h-4 w-4" />
                   </div>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 p-5">

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="220" viewBox="0 0 1100 220">
+<style>
+.wordmark{
+ font-family:"Gascogne", serif;
+ font-size:150px;
+ fill:#EC641D;
+ font-weight:400;
+}
+</style>
+<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" class="wordmark">$SOLE</text>
+</svg>
