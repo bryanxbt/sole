@@ -238,14 +238,14 @@ function BuilderGrade() {
           </h3>
         </Reveal>
 
-        <Reveal delay={0.1} className="mx-auto mt-14 max-w-md">
-          <div className="overflow-hidden rounded-[2rem] bg-cream-deep/50 p-6">
+        <Reveal delay={0.1} className="mx-auto mt-14 max-w-lg">
+          <div className="overflow-hidden rounded-[2rem] bg-cream-deep/50 p-3 sm:p-5">
             <Image
-              src="/images/macro.jpg"
-              alt="Builder Grade macro photography"
+              src="/images/arch-pepe.jpg"
+              alt="Arch Pepe — Builder Grade™"
               width={700}
               height={700}
-              className="w-full rounded-2xl object-cover"
+              className="w-full rounded-2xl object-cover object-top"
             />
           </div>
         </Reveal>

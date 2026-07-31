@@ -1,6 +1,6 @@
 "use client";
 
-import { ArchMark } from "./ArchMark";
+import { ArchLogo } from "./ArchMark";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 
@@ -28,7 +28,7 @@ export function Nav() {
         style={{ maxWidth: scrolled ? "56rem" : undefined }}
       >
         <a href="#top" className="flex items-center gap-2.5 text-ink">
-          <ArchMark className="h-6 w-6 text-orange" color="currentColor" />
+          <ArchLogo variant="orange" size={26} className="shrink-0" />
           <span className="text-[15px] font-semibold tracking-tight">
             $SOLE
           </span>

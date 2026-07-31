@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FloatingInsole } from "../FloatingInsole";
 import { ArchShape } from "../ArchMark";
@@ -10,11 +11,11 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-cream px-6 pb-20 pt-28"
     >
-      {/* Giant faded Arch */}
+      {/* Giant faded official-style Arch */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <ArchShape
           className="h-[min(130vw,1100px)] w-[min(130vw,1100px)] text-orange"
-          opacity={0.14}
+          opacity={0.12}
         />
       </div>
 
@@ -23,6 +24,22 @@ export function Hero() {
       <div className="pointer-events-none absolute bottom-16 right-6 h-16 w-16 border-b border-r border-orange/25 sm:bottom-20 sm:right-10" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        <motion.div
+          className="mb-6"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Image
+            src="/images/arch-logo-orange-on-cream.png"
+            alt="Arch Network"
+            width={48}
+            height={48}
+            className="mx-auto h-12 w-12 object-contain"
+            priority
+          />
+        </motion.div>
+
         <motion.p
           className="mb-4 text-[11px] font-medium uppercase tracking-[0.35em] text-orange"
           initial={{ opacity: 0, y: 16 }}

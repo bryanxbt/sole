@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal } from "../Reveal";
 
 const specs = [
@@ -16,6 +17,13 @@ export function Specs() {
     <section id="specs" className="bg-indigo px-6 py-28 text-cream sm:py-36">
       <div className="mx-auto max-w-3xl">
         <Reveal className="mb-14 text-center sm:mb-20">
+          <Image
+            src="/images/arch-logo-cream-on-orange.png"
+            alt="Arch Network"
+            width={44}
+            height={44}
+            className="mx-auto mb-6 h-11 w-11 rounded-xl object-contain shadow-[0_8px_24px_rgba(232,90,28,0.35)]"
+          />
           <p className="text-[12px] font-medium uppercase tracking-[0.32em] text-orange">
             Product Specifications
           </p>

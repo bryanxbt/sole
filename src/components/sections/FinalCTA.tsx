@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal } from "../Reveal";
 import { FloatingInsole } from "../FloatingInsole";
-import { ArchMark } from "../ArchMark";
+import { ArchLogo } from "../ArchMark";
 
 export function FinalCTA() {
   return (
@@ -50,15 +51,26 @@ export function Footer() {
   return (
     <footer className="border-t border-ink/5 bg-cream-soft px-6 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
-        <div className="flex items-center gap-2.5 text-ink-muted">
-          <ArchMark className="h-5 w-5 text-orange" />
+        <div className="flex items-center gap-3 text-ink-muted">
+          <ArchLogo variant="orange" size={28} />
           <span className="text-[13px]">
             $SOLE · Unofficial community token for Arch Network
           </span>
         </div>
-        <p className="text-[12px] text-ink-muted/70">
-          Not affiliated with Arch Network. Built with support.
-        </p>
+        <div className="flex items-center gap-3">
+          <div className="relative h-9 w-9 overflow-hidden rounded-full ring-1 ring-ink/10">
+            <Image
+              src="/images/arch-pepe.jpg"
+              alt="Arch Pepe"
+              fill
+              className="object-cover object-[50%_20%]"
+              sizes="36px"
+            />
+          </div>
+          <p className="text-[12px] text-ink-muted/70">
+            Not affiliated with Arch Network. Built with support.
+          </p>
+        </div>
       </div>
     </footer>
   );
