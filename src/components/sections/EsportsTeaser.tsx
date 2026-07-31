@@ -26,7 +26,7 @@ export function EsportsTeaser() {
             $SOLE Dodgeball
           </h1>
           <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-ink-muted">
-            A teaser. Average Joes. Maximum Arch Support.
+            A teaser. Average Pepes. Maximum Arch Support.
           </p>
         </motion.div>
 
