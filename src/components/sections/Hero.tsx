@@ -48,10 +48,6 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.15, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Secondary mark behind product for depth */}
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <SoleMark className="h-[min(78vw,440px)] w-[min(78vw,440px)] opacity-[0.16]" />
-          </div>
           <div className="relative z-10 py-2">
             <FloatingInsole size={440} priority rotateOnScroll float />
           </div>
