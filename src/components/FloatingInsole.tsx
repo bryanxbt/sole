@@ -16,7 +16,7 @@ type Props = {
 
 export function FloatingInsole({
   className = "",
-  size = 420,
+  size = 480,
   src = "/images/insole-cutout.png",
   alt = "Sole — Arch Support insole",
   float = true,
