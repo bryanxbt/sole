@@ -7,28 +7,33 @@ import { SoleMark } from "../SoleBrand";
 const cards = [
   {
     label: "Builders",
+    blurb: "Shipping on Arch",
     image: "/images/pepe-builders.jpg",
-    crop: "object-[50%_28%]",
+    crop: "object-[50%_20%]",
   },
   {
     label: "Validators",
+    blurb: "Securing the network",
     image: "/images/pepe-validators.jpg",
-    crop: "object-[50%_30%]",
+    crop: "object-[50%_18%]",
   },
   {
     label: "Creators",
+    blurb: "Making culture",
     image: "/images/pepe-creators.jpg",
-    crop: "object-[50%_25%]",
+    crop: "object-[50%_18%]",
   },
   {
     label: "Traders",
+    blurb: "Providing support",
     image: "/images/pepe-traders.jpg",
-    crop: "object-[50%_32%]",
+    crop: "object-[50%_15%]",
   },
   {
     label: "Believers",
+    blurb: "Holding the foundation",
     image: "/images/pepe-believers.jpg",
-    crop: "object-[50%_30%]",
+    crop: "object-[50%_18%]",
   },
 ];
 
@@ -44,8 +49,7 @@ export function Community() {
             Who it supports
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-ink-muted">
-            Arch Pepe represents every role building on Arch — one character,
-            full support.
+            Arch Pepe in every role — one character, full Arch Support.
           </p>
         </Reveal>
 
@@ -53,7 +57,6 @@ export function Community() {
           {cards.map((card) => (
             <RevealItem key={card.label}>
               <div className="group relative aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-cream-deep">
-                {/* Arch-inspired rounded top crop frame */}
                 <div className="absolute inset-0">
                   <AssetImage
                     src={card.image}
@@ -63,7 +66,7 @@ export function Community() {
                     className={`object-cover transition-transform duration-700 group-hover:scale-105 ${card.crop}`}
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/15 to-transparent" />
                 <div className="absolute left-3 top-3 opacity-90">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-cream/90 backdrop-blur-sm">
                     <SoleMark className="h-4 w-4" />
@@ -73,6 +76,7 @@ export function Community() {
                   <p className="text-[1.05rem] font-semibold tracking-tight text-white">
                     {card.label}
                   </p>
+                  <p className="mt-0.5 text-[12px] text-white/65">{card.blurb}</p>
                 </div>
               </div>
             </RevealItem>
