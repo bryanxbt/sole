@@ -36,6 +36,19 @@ export function DodgeballGame({
     handleRef.current = null;
   }, []);
 
+  /** Arcade-style leave: exit match, return to insert-support lobby (not site e-sports). */
+  const backToLobby = useCallback(() => {
+    cleanup();
+    setView({
+      status: "connecting",
+      message: "…",
+      match: null,
+      role: null,
+    });
+    setPhase("entry");
+    if (onExit) onExit();
+  }, [cleanup, onExit]);
+
   useEffect(() => () => cleanup(), [cleanup]);
 
   const startLive = async () => {
@@ -140,11 +153,9 @@ export function DodgeballGame({
           <button type="button" className="db-btn" onClick={() => void startPractice()}>
             PRACTICE VS ARCH-BOT
           </button>
-          {onExit && (
-            <button type="button" className="db-btn db-btn--ghost" onClick={onExit}>
-              BACK
-            </button>
-          )}
+          <button type="button" className="db-btn db-btn--ghost" onClick={backToLobby}>
+            BACK TO LOBBY
+          </button>
           <p className="db-source">
             ENTRY · {source === "coinup" ? "COINUP CABINET" : "SOLE PORTAL"}
           </p>
@@ -160,15 +171,8 @@ export function DodgeballGame({
           <button type="button" className="db-btn" onClick={() => void startPractice()}>
             PRACTICE VS ARCH-BOT
           </button>
-          <button
-            type="button"
-            className="db-btn db-btn--ghost"
-            onClick={() => {
-              cleanup();
-              setPhase("entry");
-            }}
-          >
-            CANCEL
+          <button type="button" className="db-btn db-btn--ghost" onClick={backToLobby}>
+            BACK TO LOBBY
           </button>
         </div>
       )}
@@ -224,6 +228,11 @@ export function DodgeballGame({
           {view.status === "error" && (
             <p className="db-error">{view.message}</p>
           )}
+          <div className="db-leave">
+            <button type="button" className="db-btn db-btn--ghost" onClick={backToLobby}>
+              BACK TO LOBBY
+            </button>
+          </div>
         </div>
       )}
     </div>

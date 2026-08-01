@@ -431,3 +431,10 @@ img {
   font-size: 11px;
   color: var(--orange-hot);
 }
+
+/* Arcade-style leave (session lobby) — separate from top E-SPORTS site nav */
+.db-leave {
+  margin-top: 0.85rem;
+  display: flex;
+  justify-content: center;
+}
