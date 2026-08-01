@@ -1,6 +1,10 @@
 /**
  * Prefix public asset paths with the GitHub Pages basePath in production.
  * Next/Image does not always apply basePath for unoptimized static export.
+ *
+ * Use for: <img src>, <a href> (plain anchors), metadata images.
+ * Do NOT use with next/link or next/navigation — they already apply basePath
+ * (wrapping those causes /sole/sole/... on GitHub Pages).
  */
 export function withBase(path: string): string {
   if (!path || path.startsWith("http") || path.startsWith("data:")) {

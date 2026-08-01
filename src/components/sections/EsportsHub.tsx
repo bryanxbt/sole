@@ -5,7 +5,6 @@ import Link from "next/link";
 import { AssetImage } from "../AssetImage";
 import { SoleMark } from "../SoleBrand";
 import { SOLE_DODGEBALL } from "@/lib/esports/brand";
-import { withBase } from "@/lib/paths";
 
 /** $SOLE E-Sports portal — Sole Dodgeball hub + mode roadmap */
 export function EsportsHub() {
@@ -94,8 +93,9 @@ export function EsportsHub() {
             </div>
 
             <div className="space-y-3">
+              {/* next/link applies basePath automatically */}
               <Link
-                href={withBase(SOLE_DODGEBALL.playPath)}
+                href={SOLE_DODGEBALL.playPath}
                 className="btn-primary flex min-h-[48px] w-full items-center justify-center"
               >
                 Play 1v1 · {SOLE_DODGEBALL.entry.costLabel}

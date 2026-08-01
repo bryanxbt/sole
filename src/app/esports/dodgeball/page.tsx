@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DodgeballGame } from "@/game/dodgeball/DodgeballGame";
-import { withBase } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "SOLE Dodgeball — Play 1v1 | $SOLE E-Sports",
@@ -13,10 +12,11 @@ export default function DodgeballPlayPage() {
   return (
     <div className="db-page">
       <div className="db-page-nav">
-        <Link href={withBase("/esports/")} className="db-nav-link">
+        {/* Next.js Link already applies basePath — do not wrap withBase() */}
+        <Link href="/esports/" className="db-nav-link">
           ← E-SPORTS
         </Link>
-        <Link href={withBase("/")} className="db-nav-link">
+        <Link href="/" className="db-nav-link">
           $SOLE
         </Link>
       </div>
