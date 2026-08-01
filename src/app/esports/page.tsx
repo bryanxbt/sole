@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/sections/FinalCTA";
-import { EsportsTeaser } from "@/components/sections/EsportsTeaser";
+import { EsportsHub } from "@/components/sections/EsportsHub";
 import { withBase } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "$SOLE Dodgeball — E-Sports | Arch Support",
   description:
-    "A teaser for $SOLE Dodgeball. No bridges. No wraps. Just support.",
+    "SOLE Dodgeball: live 1v1 now. 2v2, 3v3, 4v4, and FFA coming. No bridges. No wraps. Just support.",
   openGraph: {
     title: "$SOLE Dodgeball — E-Sports",
-    description: "No bridges. No wraps. Just support.",
+    description: "Live 1v1 dodgeball. Arch-branded pixel arcade.",
     images: [withBase("/images/sole-dodgeball-poster.jpg")],
   },
 };
@@ -20,7 +20,7 @@ export default function EsportsPage() {
     <>
       <Nav />
       <main className="flex-1">
-        <EsportsTeaser />
+        <EsportsHub />
       </main>
       <Footer />
     </>

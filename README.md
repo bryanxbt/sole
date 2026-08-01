@@ -37,6 +37,13 @@ npm start
 
 Product art lives in `public/images/`.
 
+## E-Sports — SOLE Dodgeball
+
+- Hub: [`/esports/`](./src/app/esports/page.tsx)
+- Play 1v1: [`/esports/dodgeball/`](./src/app/esports/dodgeball/page.tsx)
+- Modes roadmap: 1v1 (live), 2v2 / 3v3 / 4v4 / FFA (soon)
+- Also linked from the **CoinUp** arcade cabinet `sole-dodgeball`
+
 ## Notes
 
 - Buy CTA currently links to Arch Network — swap for your market / DEX URL when ready.
