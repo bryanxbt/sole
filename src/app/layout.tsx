@@ -20,7 +20,7 @@ const display = Cormorant_Garamond({
   weight: ["400", "500", "600"],
 });
 
-const siteUrl = "https://buildtogetherlabs.github.io/sole";
+const siteUrl = "https://bryanxbt.github.io/sole";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -6,7 +6,7 @@ const basePath = isProd ? `/${repo}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",
-  // Project site: https://buildtogetherlabs.github.io/sole/
+  // Project site: https://bryanxbt.github.io/sole/
   basePath,
   assetPrefix: isProd ? `${basePath}/` : undefined,
   images: {
