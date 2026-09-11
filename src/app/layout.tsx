@@ -21,9 +21,11 @@ const display = Cormorant_Garamond({
 });
 
 const siteUrl = "https://bryanxbt.github.io/sole";
+/** Origin only — withBase() already prefixes /sole. Using siteUrl here doubled the path. */
+const siteOrigin = "https://bryanxbt.github.io";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(siteOrigin),
   title: "$SOLE — Arch Support",
   description:
     "Every Arch needs a Sole. The unofficial community token providing Arch Support on Arch Network.",
@@ -31,6 +33,7 @@ export const metadata: Metadata = {
     title: "$SOLE — Arch Support",
     description:
       "Every Arch needs a Sole. The community token providing Arch Support.",
+    url: siteUrl,
     images: [withBase("/images/brand/wordmark-lockup-full.png")],
     type: "website",
   },

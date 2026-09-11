@@ -4,6 +4,8 @@ Every Arch needs a Sole.
 
 Premium landing page for **$SOLE**, the unofficial community token providing Arch Support on [Arch Network](https://arch.network). Designed to feel like Apple launched orthopedic insoles — until the punchline lands mid-scroll.
 
+**Live:** [https://bryanxbt.github.io/sole/](https://bryanxbt.github.io/sole/)
+
 ## Stack
 
 - **Next.js** (App Router)
@@ -22,9 +24,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Build
 
+Static export for GitHub Pages (`out/`). Push to `main` deploys via Actions.
+
 ```bash
 npm run build
-npm start
 ```
 
 ## Brand
